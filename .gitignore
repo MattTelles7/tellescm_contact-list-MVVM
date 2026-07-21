@@ -1,0 +1,100 @@
+# Build results
+[Bb]in/
+[Oo]bj/
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+
+# Visual Studio / MSBuild
+.vs/
+*.user
+*.rsuser
+*.suo
+*.userosscache
+*.sln.docstates
+*.VC.db
+*.VC.VC.opendb
+*.cache
+Generated\ Files/
+
+# JetBrains Rider / ReSharper
+.idea/
+*.sln.iml
+_ReSharper*/
+*.DotSettings.user
+
+# VS Code local settings
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+
+# NuGet
+*.nupkg
+*.snupkg
+packages/
+.nuget/packages/
+project.lock.json
+project.assets.json
+
+# Test and coverage output
+[Tt]est[Rr]esult*/
+TestResults/
+*.trx
+*.coverage
+*.coveragexml
+coverage/
+coverage*/
+
+# .NET MAUI / Xamarin Android
+*.apk
+*.ap_
+*.aab
+*.dex
+*.keystore
+*.jks
+
+# .NET MAUI / Xamarin iOS and Mac Catalyst
+*.ipa
+*.dSYM/
+*.dSYM.zip
+xcuserdata/
+*.xcuserstate
+*.xccheckout
+DerivedData/
+*.mobileprovision
+*.provisionprofile
+
+# .NET MAUI / Windows packaging
+AppPackages/
+BundleArtifacts/
+*.appx
+*.appxbundle
+*.appinstaller
+*.msix
+*.msixbundle
+*.cer
+*.pfx
+*.snk
+Package.StoreAssociation.xml
+_pkginfo.txt
+
+# Logs and diagnostics
+*.log
+*.binlog
+*.tlog
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+*.local
+
+# OS generated files
+.DS_Store
+Thumbs.db
+Desktop.ini
