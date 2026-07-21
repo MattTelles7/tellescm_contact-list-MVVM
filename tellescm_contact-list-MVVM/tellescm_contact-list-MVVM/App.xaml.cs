@@ -1,12 +1,11 @@
-﻿namespace tellescm_contact_list_MVVM
+namespace tellescm_contact_list_MVVM
 {
     public partial class App : Application
     {
-        public App()
+        public App(MainPage mainPage)
         {
             InitializeComponent();
-
-            MainPage = new AppShell();
+            MainPage = new NavigationPage(mainPage);
         }
     }
 }

@@ -1,36 +1,36 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="tellescm_contact_list_MVVM.MainPage"
-             Title="Add Contact">
+             x:Class="tellescm_contact_list_MVVM.Views.ContactDetailsPage"
+             Title="Contact Details">
 
     <ScrollView>
         <VerticalStackLayout Padding="24" Spacing="14">
-            <Label Text="Add a contact"
+            <Label Text="Contact details"
                    FontSize="28"
                    FontAttributes="Bold"
                    SemanticProperties.HeadingLevel="Level1" />
-            <Label Text="Enter the information below, then save it to your contact list."
+            <Label Text="Review or update this contact's information."
                    TextColor="{StaticResource Gray500}" />
 
             <Label Text="Name" FontAttributes="Bold" />
-            <Entry Text="{Binding Name}" Placeholder="Full name" />
+            <Entry Text="{Binding Name}" />
 
             <Label Text="Email" FontAttributes="Bold" />
-            <Entry Text="{Binding Email}" Placeholder="name@example.com" Keyboard="Email" />
+            <Entry Text="{Binding Email}" Keyboard="Email" />
 
             <Label Text="Phone Number" FontAttributes="Bold" />
-            <Entry Text="{Binding PhoneNumber}" Placeholder="(555) 123-4567" Keyboard="Telephone" />
+            <Entry Text="{Binding PhoneNumber}" Keyboard="Telephone" />
 
             <Label Text="Description" FontAttributes="Bold" />
             <Editor Text="{Binding Description}"
-                    Placeholder="A short note about this contact"
                     MinimumHeightRequest="110"
                     AutoSize="TextChanges" />
 
-            <Button Text="Save Contact"
-                    Command="{Binding SaveCommand}"
-                    Margin="0,10,0,0" />
+            <Grid ColumnDefinitions="*,*" ColumnSpacing="12" Margin="0,10,0,0">
+                <Button Grid.Column="0" Text="Back" Command="{Binding BackCommand}" />
+                <Button Grid.Column="1" Text="Save Changes" Command="{Binding SaveCommand}" />
+            </Grid>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
