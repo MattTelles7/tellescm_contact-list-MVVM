@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:models="clr-namespace:tellescm_contact_list_MVVM.Models"
+             xmlns:viewModels="clr-namespace:tellescm_contact_list_MVVM.ViewModels"
              x:Class="tellescm_contact_list_MVVM.Views.ContactsPage"
+             x:DataType="viewModels:ContactsViewModel"
              Title="Contacts">
 
     <Grid Padding="24" RowDefinitions="Auto,*" RowSpacing="16">
@@ -22,7 +25,7 @@
                        TextColor="{StaticResource Gray500}" />
             </CollectionView.EmptyView>
             <CollectionView.ItemTemplate>
-                <DataTemplate>
+                <DataTemplate x:DataType="models:Contact">
                     <Grid Padding="0,14" RowDefinitions="Auto,Auto">
                         <Label Text="{Binding Name}"
                                FontAttributes="Bold"

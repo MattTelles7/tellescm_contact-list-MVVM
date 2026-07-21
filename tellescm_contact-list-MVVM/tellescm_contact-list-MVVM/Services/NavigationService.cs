@@ -29,6 +29,6 @@ public class NavigationService(IServiceProvider serviceProvider)
     }
 
     private static INavigation Navigation =>
-        Application.Current?.MainPage?.Navigation
+        Application.Current?.Windows.FirstOrDefault()?.Page?.Navigation
         ?? throw new InvalidOperationException("The navigation stack is not available.");
 }
