@@ -16,8 +16,8 @@
                         Grid.Row="1"
                         ItemsSource="{Binding Contacts}"
                         SelectionMode="Single"
-                        SelectionChangedCommand="{Binding SelectContactCommand}"
-                        SelectionChangedCommandParameter="{Binding Source={x:Reference ContactList}, Path=SelectedItem}">
+                        SelectedItem="{Binding SelectedContact, Mode=TwoWay}"
+                        SelectionChangedCommand="{Binding SelectContactCommand}">
             <CollectionView.EmptyView>
                 <Label Text="No contacts have been added yet."
                        HorizontalOptions="Center"

@@ -10,6 +10,9 @@ public partial class ContactsViewModel(ContactStore contactStore, NavigationServ
 {
     public ObservableCollection<ContactModel> Contacts => contactStore.Contacts;
 
+    [ObservableProperty]
+    private ContactModel? selectedContact;
+
     [RelayCommand]
     private Task AddContactAsync()
     {
@@ -17,8 +20,11 @@ public partial class ContactsViewModel(ContactStore contactStore, NavigationServ
     }
 
     [RelayCommand]
-    private Task SelectContactAsync(ContactModel? contact)
+    private Task SelectContactAsync()
     {
+        var contact = SelectedContact;
+        SelectedContact = null;
+
         return contact is null
             ? Task.CompletedTask
             : navigationService.NavigateToContactDetailsAsync(contact);
